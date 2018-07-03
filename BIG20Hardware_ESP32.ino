@@ -71,7 +71,8 @@ uint32_t g_seek;
 
 // Setup method runs once, when the sketch starts
 void setup() {
-
+    pinMode(21, OUTPUT);
+    digitalWrite(21, LOW);
     Serial.begin(115200);
     Serial.println("AnimatedGIFs_SD");
      if (!SD.begin(22, SPI2, 1000000000)) {
